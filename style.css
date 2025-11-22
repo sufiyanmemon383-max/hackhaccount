@@ -1,0 +1,227 @@
+:root {
+    --primary-color: #38a169; 
+    --secondary-color: #2b6cb0; 
+    --text-color: #2d3748;
+    --background-color: white;
+    --card-background: #ffffff;
+    --border-color: black;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding-top: 60px; 
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+#welcome-user {
+    font-weight: bold;
+}
+
+#logout-btn {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 9px;
+}
+
+
+input[type="text"], input[type="email"], input[type="password"], textarea, input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4c8ddc;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+#create-post, #auth-screen, .post-card {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+#post-text {
+    resize: vertical;
+    min-height: 80px;
+}
+
+#publish-btn {
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+.post-card {
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #718096;
+    margin-bottom: 10px;
+}
+
+.post-image img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-color);
+}
+
+.like-button {
+    background: none;
+    color: var(--text-color);
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.like-button:hover {
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.liked {
+    color: red !important;
+}
+
+.delete-button {
+    background-color: #e53e3e;
+    padding: 5px 10px;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    header {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+#app-header {
+    
+    background-color: #4CAF50; 
+    
+    padding: 15px 0; 
+    
+    text-align: center; 
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+#app-header h1 {
+    /* Text color for the app name */
+    color: white; 
+    /* Remove default margin from the heading */
+    margin: 0; 
+    /* Adjust font size */
+    font-size: 1.8em;
+}
+
+/* Optional: Basic styling for the login form for better appearance */
+.container {
+    width: 500px;
+    margin: 80px auto;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+/* Styling for the surrounding paragraph */
+p {
+    /* Center the text and button */
+    text-align: center;
+    /* Add some space above the element */
+    margin-top: 20px;
+    /* Optional: style the text */
+    font-size: 16px;
+    color: #333; /* Dark gray text */
+}
+
+/* Styling for the Sign Up button */
+#show-signup {
+    /* Make it look like a button, not just text */
+    background-color: transparent; /* Transparent background */
+    color: #007bff; /* Bright blue text color */
+    border: none; /* No border */
+    padding: 5px 10px; /* Padding for size */
+    cursor: pointer; /* Change cursor on hover */
+    /* Optional: add an underline effect on hover */
+    text-decoration: none; 
+    font-weight: bold; /* Bold text */
+    font-size: 16px;
+    transition: color 0.2s; /* Smooth transition for color change */
+}
+
+/* Effect when the mouse hovers over the button */
+#show-signup:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Underline the text on hover */
+}
